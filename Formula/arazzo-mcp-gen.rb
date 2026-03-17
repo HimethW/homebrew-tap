@@ -5,20 +5,20 @@
 class ArazzoMcpGen < Formula
   desc "A CLI tool to generate MCP servers from Arazzo specifications."
   homepage "https://github.com/HimethW/arazzo-mcp-gen"
-  version "0.1.3"
+  version "0.1.4"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/HimethW/arazzo-mcp-gen/releases/download/v0.1.3/arazzo-mcp-gen_Darwin_x86_64.tar.gz"
-      sha256 "61e68710eccc918f0e1ee098ffb413dd9c88a6842169cb18b01f9a01e6785c7f"
+      url "https://github.com/HimethW/arazzo-mcp-gen/releases/download/v0.1.4/arazzo-mcp-gen_Darwin_x86_64.tar.gz"
+      sha256 "8a12e5e8bb15ba683b261e8433a8771a166704bf9b8608147fbca601859adea4"
 
       define_method(:install) do
         bin.install "arazzo-mcp-gen"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/HimethW/arazzo-mcp-gen/releases/download/v0.1.3/arazzo-mcp-gen_Darwin_arm64.tar.gz"
-      sha256 "151293a0ada882bd81e58b942bb921b5bb4f475470f26a514da28e8e95c5b2ba"
+      url "https://github.com/HimethW/arazzo-mcp-gen/releases/download/v0.1.4/arazzo-mcp-gen_Darwin_arm64.tar.gz"
+      sha256 "237cdc0ba59a6ac28ab90a1808e23c12e5b2606a0f6b573743dee3346fa8f339"
 
       define_method(:install) do
         bin.install "arazzo-mcp-gen"
@@ -28,8 +28,8 @@ class ArazzoMcpGen < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/HimethW/arazzo-mcp-gen/releases/download/v0.1.3/arazzo-mcp-gen_Linux_x86_64.tar.gz"
-      sha256 "7a0bdb7850fc8731b153d88f628e4eb2758a86c89021dc0672c8cf0158430c2a"
+      url "https://github.com/HimethW/arazzo-mcp-gen/releases/download/v0.1.4/arazzo-mcp-gen_Linux_x86_64.tar.gz"
+      sha256 "0b4434dae9a5b3bf927b800b9ba478cfed674afc3d373bed1274ef8a59034198"
       define_method(:install) do
         bin.install "arazzo-mcp-gen"
       end
