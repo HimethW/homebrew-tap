@@ -5,33 +5,33 @@
 class ArazzoMcpGen < Formula
   desc "A CLI tool to generate MCP servers from Arazzo specifications."
   homepage "https://github.com/HimethW/arazzo-mcp-gen"
-  version "0.1.7"
+  version "0.1.8"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/HimethW/arazzo-mcp-gen/releases/download/v0.1.7/arazzo-mcp-gen_Darwin_x86_64.tar.gz"
-      sha256 "3603c5cbc6351b778ac9d9631720e03f44576935d9d59ec0fb8481be43dec6c2"
+      url "https://github.com/HimethW/arazzo-mcp-gen/releases/download/v0.1.8/arazzo-mcp-gen_Darwin_x86_64.tar.gz"
+      sha256 "c00288572e52f8245f41828108527842e2f47fa054ae71fd247fee0f4e760aab"
 
       define_method(:install) do
-        bin.install "arazzo-mcp-gen"
+        bin.install Dir["arazzo-mcp-gen*"].first => "arazzo-mcp-gen"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/HimethW/arazzo-mcp-gen/releases/download/v0.1.7/arazzo-mcp-gen_Darwin_arm64.tar.gz"
-      sha256 "5589a4ed005f9947b40b5bbca4d0b0d3b1cf7ab7ef99d11ee74ca5a627e87a5a"
+      url "https://github.com/HimethW/arazzo-mcp-gen/releases/download/v0.1.8/arazzo-mcp-gen_Darwin_arm64.tar.gz"
+      sha256 "3cc8a2a9af222df4e5a2c95ec285d07dae684e3e76eb38ae235dbc5d516accb6"
 
       define_method(:install) do
-        bin.install "arazzo-mcp-gen"
+        bin.install Dir["arazzo-mcp-gen*"].first => "arazzo-mcp-gen"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/HimethW/arazzo-mcp-gen/releases/download/v0.1.7/arazzo-mcp-gen_Linux_x86_64.tar.gz"
-      sha256 "d306848e2198b4e5e445a7243677d608ed2900b8ad4a158369dd592dcae68735"
+      url "https://github.com/HimethW/arazzo-mcp-gen/releases/download/v0.1.8/arazzo-mcp-gen_Linux_x86_64.tar.gz"
+      sha256 "9837a028f4e08e7365184459ee50468a9a2ab50eae17b58baae9c2de824c555d"
       define_method(:install) do
-        bin.install "arazzo-mcp-gen"
+        bin.install Dir["arazzo-mcp-gen*"].first => "arazzo-mcp-gen"
       end
     end
   end
